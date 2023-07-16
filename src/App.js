@@ -22,6 +22,7 @@ render() {
   const filterMonsters= monsters.filter(monster => monster.name.toLowerCase().includes(searchField.toLowerCase()))
   return(
     <div>
+      <h1>Monsteres Rolodex</h1>
       <SearchBar placeholder={'search'} changeHandler={e => this.setState({searchField: e.target.value})} />
       <CardList monsters={filterMonsters} />
     </div>
